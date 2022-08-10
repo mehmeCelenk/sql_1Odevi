@@ -1,1 +1,1 @@
-# sql_1Odevi
+# sql_Odevleri www.patika.dev
