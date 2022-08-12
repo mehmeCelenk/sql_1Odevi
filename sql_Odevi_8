@@ -1,0 +1,46 @@
+CREATE TABLE employee (
+    id INTEGER,
+    name VARCHAR(50) NOT null,
+    birthday DATE,
+    email VARCHAR(100)
+);
+
+UPDATE employee
+SET name = 'mehmet'
+WHERE name LIKE 'A%'
+RETURNING *;
+
+UPDATE employee
+SET email = 'mehmet.com'
+WHERE email LIKE 'c%'
+RETURNING *;
+
+UPDATE employee
+SET name = 'şafak'
+WHERE id > 35
+RETURNING *;
+
+UPDATE employee
+SET birthday = '1999-03-01'
+WHERE birthday = '1956-08-09'
+RETURNING *;
+
+UPDATE employee
+SET name = 'xx'
+WHERE id BETWEEN 15 AND 18
+RETURNING *;
+
+DELETE FROM employee
+WHERE name = 'xx';
+
+DELETE FROM employee
+WHERE name = 'mehmet';
+
+DELETE FROM employee
+WHERE id BETWEEN 5 AND 10; 
+
+DELETE FROM employee
+WHERE birthday = '1999-03-01';
+
+DELETE FROM employee
+WHERE name = 'şafak';
